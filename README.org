@@ -1,0 +1,23 @@
+#+title: Mini EVM calculator 🤖
+
+#+BEGIN_QUOTE
+A rough small calculator built in Rust that compile the calculation to EVM bytecode and execute it.
+#+END_QUOTE
+
+** How to run
+
+- Step 1: install Rust and Cargo on your machine
+
+- Step 2: clone the repository
+
+- Step 3: start the calculator
+#+BEGIN_SRC shell
+cargo run
+#+END_SRC
+
+** How it works
+
+1. The lexer takes in the source (i.e. calculation) and generates a vector of Tokens
+2. The parser converts it to its Prefix/Polish Notation equivalent
+3. The codegen compiles it EVM bytecode
+4. A mini EVM then execute it and returns the remaining value on its stack
